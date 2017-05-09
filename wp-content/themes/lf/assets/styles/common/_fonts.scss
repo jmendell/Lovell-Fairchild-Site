@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700'); //Montserrat
+@import url('https://fonts.googleapis.com/css?family=Cinzel'); //Cinzel
+
+$primary:'Montserrat';
+$secondary:'Cinzel';
+$thin:100;
+$lite:300;
+$regular:400;
+$semi:600;
+$bold:700;
+
+$small:.7em;
+$title:1.2em;
+$big:1.8em;
+
+body{
+	font-family:$primary;
+	font-weight:$lite;
+	-webkit-font-smoothing:antialiased;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+	margin-top:0;
+	margin-bottom:15px;
+}
+
+h1{
+	font-size:3em;
+	letter-spacing:2px;
+	text-transform:uppercase;
+	span{
+		display:block;
+	}
+}
+
+h2{
+	font-size:2em;
+	font-weight:$semi;
+	text-transform:uppercase;
+}
+
+h3{
+	font-size:1.5em;
+	font-weight:$regular;
+	text-transform:uppercase;
+}
+
+p{
+	line-height:1.6em;
+}
+
+.page-title{
+	font-size:3em;
+	color:$color-white;
+	text-transform:uppercase;
+	font-weight:$bold;
+}
+
+.section-title{
+	font-family:$secondary;
+	color:$color-gray;
+	font-size:1em;
+	text-transform:uppercase;
+	letter-spacing:1px;
+}
+
+.entry-title{
+	font-size:2em;
+}
+
+.content{
+	p{
+		margin-bottom:0;
+	}
+}
+
+.accent-color-brand{
+	color:$color-brand;
+}

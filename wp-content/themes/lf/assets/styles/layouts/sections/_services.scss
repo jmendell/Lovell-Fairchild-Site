@@ -1,0 +1,50 @@
+.service-sections{
+	padding:100px 0;
+	@include media($tablet){
+		padding:50px 0;
+	}
+	.content-container{
+		display:flex;
+		flex-flow:row wrap;
+		@include media($tablet){
+			display:block;
+		}
+	}
+	.service-column{
+		flex:1;
+		max-width:50%;
+		$service-padding:50px;
+		&:nth-child(odd){
+			padding-right:$service-padding / 2;
+			@include media($tablet){
+				padding-right:0;
+			}
+		}
+		&:nth-child(even){
+			padding-left:$service-padding / 2;
+			@include media($tablet){
+				padding-left:0;
+			}
+		}
+	}
+	.service{
+		flex:1;
+		margin-bottom:25px;
+		h2{
+			margin-bottom:25px;
+			img{
+				height:1em;
+				margin-right:5px;
+			}
+		}
+	}
+	.sub-service-list{
+		@include striplist;
+		li{
+			margin-bottom:10px;
+			span{
+				font-weight:$bold;
+			}
+		}
+	}
+}

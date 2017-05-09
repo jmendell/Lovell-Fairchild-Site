@@ -1,0 +1,354 @@
+// Single client template.
+.post-type-clients{
+	header{
+		.container{
+			padding:25px 0;
+		}
+	}
+	article.clients{
+		padding:100px 0;
+		@include media($tablet){
+			padding:50px 0;
+		}
+		.content-container{
+			@include media($tablet){
+				display:flex;
+				flex-direction:column-reverse;
+			}
+			.col-6{
+				margin-bottom:25px;
+				&:first-child{
+					margin-bottom:0;
+				}
+			}
+		}
+		.content{
+			margin-bottom:15px;
+		}
+	}
+}
+
+// The category list display on client previews.
+.client-categories{
+	.section-title{
+		color:$color-black;
+	}
+	section.cat{
+		padding:50px 0;
+		&:nth-child(even){
+			background:$color-bg-gray;
+		}
+	}
+}
+
+// Home page small feed.
+.clients-preview{
+	.section-header{
+		text-align:center;
+		padding:75px 0;
+		h2{
+			margin-bottom:10px;
+			color:$color-black;
+			font-weight:$regular;
+		}
+	}
+	.client-list{
+		display:flex;
+		flex-flow:row wrap;
+		@include striplist;
+		@include media($mobile){
+			flex-direction:column;
+		}
+	}
+	.client-item{
+		display:block;
+		position:relative;
+		overflow:hidden;
+		height:300px;
+		@include media($desktop){
+			&:hover{
+				.client-image{
+					@include transform(translateY(-50%) translateX(-50%) scale(1.02));
+				}
+			}
+		}
+		&.cols-1-3{
+			flex:33.333333% 0 0;
+			@include media($tablet){
+				flex:1 0 50%;
+			}
+			@include media($mobile){
+				flex:1;
+			}
+		}
+		&.cols-2-3{
+			flex:66.666666% 0 0;
+			@include media($tablet){
+				flex:1 0 50%;
+			}
+			@include media($mobile){
+				flex:1;
+			}
+		}
+		&.cols-2-4{
+			flex:50% 0 0;
+			@include media($tablet){
+				flex:1 0 50%;
+			}
+			@include media($mobile){
+				flex:1;
+			}
+		}
+		&.alt{
+			background:$color-bg-gray;
+			color:$color-black;
+			transition:.2s;
+			@include media($desktop){
+				&:hover{
+					color:$color-white;
+					background:$color-brand;
+					p{
+						color:$color-white;
+					}
+				}
+			}
+			@include media($tablet){
+				height:100px;
+			}
+			p{
+				font-family:$secondary;
+				color:$color-gray;
+				margin:0;
+			}
+		}
+		a{
+			color:$color-white;
+		}
+		.client-image{
+			margin:0;
+			background-size:cover;
+			transition:.4s;
+			height:100%;
+			width:calc(100% + 2px);
+			@include position(absolute, 50% null null 50%);
+			@include transform(translateY(-50%) translateX(-50%));
+			&:after{
+				content:'';
+				display:block;
+				background:rgba(0,0,0,.4);
+				@include size(100%);
+				@include position(absolute, 50% null null 50%);
+				@include transform(translateY(-50%) translateX(-50%));
+			}
+		}
+		.info{
+			padding:15px;
+		}
+		h3{
+			margin:0;
+			line-height:1;
+		}
+	}
+	.info{
+		width:100%;
+		@include position(absolute, null null 0 0);	
+	}
+	.categories{
+		@include striplist;
+		li{
+			display:inline-block;
+			font-family:$secondary;
+			color:$color-white;
+			font-weight:$regular;
+			font-size:.7em;
+			text-transform:uppercase;
+			&:not(:last-child){
+				margin-right:5px;
+			}
+		}
+	}
+}
+
+// The sections on the clients page
+.client-types{
+	.type{
+		padding:100px 0;
+		@include media($tablet){
+			padding:50px 0;
+		}
+		&:nth-child(even){
+			background-color:$color-bg-gray;
+			.client{
+				.info{
+					@include media($desktop){
+						&:hover{
+							color:$color-black;
+							background:$color-white;
+							p{
+								color:$color-white;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.section-title{
+		margin-bottom:50px;
+		@include media($tablet){
+			margin-bottom:25px;
+		}
+	}
+	.more-clients{
+		display:block;
+		text-transform:uppercase;
+		text-decoration:none;
+		font-weight:$regular;
+		color:$color-black;
+		font-size:.9em;
+	}
+}
+
+// Displayed on multiple templates.
+// Used to create the client grid
+.client-feed{
+	display:flex;
+	flex-wrap:wrap;
+	padding:0;
+	margin:0 0 25px 0;
+	list-style:none;
+	li{
+		position:relative;
+		overflow:hidden;
+		@include media($tablet){
+			overflow-y:visible;
+		}
+		&:not(:last-child){
+			@include media($tablet){
+				margin-bottom:15px;
+			}
+		}
+		&:hover{
+			.info{
+				opacity:1;
+			}
+		}
+		a{
+			text-decoration:none;
+		}
+	}
+	.info{
+		opacity:0;
+		display:flex;
+		justify-content:center;
+		flex-direction:column;
+		align-items:center;
+		padding:25px;
+		z-index:2;
+		position:absolute;
+		background-color:$color-bg-gray;
+		color:$color-black;
+		transition:.2s;
+		@include size(100%);
+		@include position(absolute, 0 null null 0);
+		@include media($tablet){
+			opacity:1;
+			background:none;
+			align-items:flex-start;
+			@include size(auto);
+			@include position(relative, initial null null initial);
+		}
+		h5{
+			font-size:1em;
+			text-transform:uppercase;
+			margin-bottom:0;
+			font-weight:$regular;
+		}
+		.more{
+			display:block;
+			text-transform:uppercase;
+			text-decoration:none;
+			font-weight:$regular;
+			font-size:.8em;
+		}
+	}
+	.client-bg{
+		margin:0;
+		background-position:center;
+		background-size:cover;
+		z-index:1;
+		@include size(100%);
+		@include position(absolute, 50% null null 50%);
+		@include transform(translateY(-50%) translateX(-50%));
+		@include media($tablet){
+			@include position(relative, initial null null initial);
+			@include transform(none);
+		}
+	}
+	.image-orientation-portrait{
+		flex:1 0 25%;
+		max-width:25%;
+		@include media($tablet){
+			flex:1 0 50%;
+			max-width:50%;
+		}
+		@include media($mobile){
+			flex:1 0 100%;
+			max-width:100%;
+		}
+		a{
+			display:block;
+			@include media($desktop){
+				height:calc((#{$desktop-inner} / 4) * 1.5);
+			}
+			@include media($desktop-large){
+				height:450px;
+			}
+			@include media($tablet){
+				height:auto;
+			}
+		}
+		figure{
+			@include media($tablet){
+				height:calc((#{$tablet-inner} / 2) * 1.5);
+			}
+		}
+	}
+	.image-orientation-landscape{
+		flex:1 0 33.3333%;
+		max-width:33.3333%;
+		@include media($tablet){
+			flex:1 0 50%;
+			max-width:50%;
+		}
+		@include media($mobile){
+			flex:1 0 100%;
+			max-width:100%;
+		}
+		a{
+			display:block;
+			@include media($desktop){
+				height:calc((#{$desktop-inner} / 4));
+			}
+			@include media($desktop-large){
+				height:300px;
+			}
+			@include media($tablet){
+				height:auto;
+			}
+		}
+		figure{
+			@include media($tablet){
+				height:225px;
+			}
+		}
+	}
+}
+
+// Taxonomy page
+.client-type-full-list{
+	padding:100px 0;
+	@include media($tablet){
+		padding:50px 0;
+	}
+}

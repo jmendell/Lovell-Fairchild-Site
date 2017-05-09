@@ -1,0 +1,30 @@
+.social-nav{
+	ul{
+		list-style:none;
+		padding:0;
+		margin:0;
+	}
+	li{
+		display:inline-block;
+		width:35px;
+		&:hover{
+			svg{
+				fill:$color-brand;
+			}
+		}
+		&:not(:last-child){
+			margin-right:15px;
+		}
+		svg{
+			display:block;
+			width:100%;
+			fill:$color-white;
+			path{
+				transition:.2s;
+			}
+		}
+	}
+	a{
+		display:block;
+	}
+}

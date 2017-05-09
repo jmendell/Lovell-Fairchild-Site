@@ -1,0 +1,19 @@
+.video-modal{
+	display:none;
+	z-index:10;
+	@include size(100%);
+	@include position(fixed, 50% null null 50%);
+	@include transform(translateY(-50%) translateX(-50%));
+	.modal-inner{
+		@include position(absolute, 50% null null 50%);
+		@include transform(translateY(-50%) translateX(-50%));
+	}
+	iframe{
+		width:80vw;
+		height:80vh;
+		@include media($mobile){
+			width:300px;
+			height:215px;
+		}
+	}
+}

@@ -1,0 +1,15 @@
+.contact-content{
+	padding:150px 0 100px 0;
+	.page-title{
+		margin-bottom:50px;
+	}
+	.contact-details{
+		color:$color-white;
+		font-weight:$regular;
+		font-size:1.1em;
+		@include striplist;
+		li{
+			margin-bottom:10px;
+		}
+	}
+}

@@ -1,0 +1,64 @@
+.main-menu-modal{
+	display:none;
+	color:$color-white;
+	z-index:5;
+	@include size(100% 100vh);
+	@include position(fixed, 50% null null 50%);
+	@include transform(translateY(-50%) translateX(-50%));
+	.menu-bg{
+		margin:0;
+		background-size:cover;
+		background-position:center;
+		z-index:-1;
+		@include size(100%);
+		@include position(absolute, 50% null null 50%);
+		@include transform(translateY(-50%) translateX(-50%));
+	}
+	.content{
+		display:flex;
+		flex-direction:column;
+		justify-content:center;
+		background:$color-brand-fade;
+		padding:50px;
+		@include size(50% 100%);
+		@include position(absolute, 0 0 null null);
+		@include media($tablet){
+			width:100%;
+			justify-content:center;
+			text-align:center;
+		}
+	}
+	nav{
+		display:flex;
+		align-items:center;
+		flex:10;
+		@include media($tablet){
+			justify-content:center;
+		}
+	}
+	.nav{
+		@include striplist;
+		.menu-item{
+			transition:.2s;
+			&:not(:last-child){
+				margin-bottom:25px;
+			}
+			&:hover{
+				text-indent:5px;
+			}
+			a{
+				font-size:1.1em;
+				text-transform:uppercase;
+				font-weight:$regular;
+				color:$color-white;
+				text-decoration:none;
+			}
+		}
+	}
+	.social-nav{
+		margin-bottom:15px;
+	}
+	.contact-details{
+		@include striplist;
+	}
+}

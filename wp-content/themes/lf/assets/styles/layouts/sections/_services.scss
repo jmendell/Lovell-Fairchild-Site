@@ -13,15 +13,15 @@
 	.service-column{
 		flex:1;
 		max-width:50%;
-		$service-padding:50px;
+		$service-padding:12.5px 12.5px 0 0;
 		&:nth-child(odd){
-			padding-right:$service-padding / 2;
+			padding:$service-padding;
 			@include media($tablet){
 				padding-right:0;
 			}
 		}
 		&:nth-child(even){
-			padding-left:$service-padding / 2;
+			padding: 0 12.5px;
 			@include media($tablet){
 				padding-left:0;
 			}
@@ -29,11 +29,12 @@
 	}
 	.service{
 		flex:1;
-		margin-bottom:25px;
+		margin:100px 12.5px 50px;
+
 		h2{
 			margin-bottom:25px;
 			img{
-				height:1em;
+				height:1.2em;
 				margin-right:5px;
 			}
 		}
@@ -41,7 +42,7 @@
 	.sub-service-list{
 		@include striplist;
 		li{
-			margin-bottom:10px;
+			
 			span{
 				font-weight:$bold;
 			}

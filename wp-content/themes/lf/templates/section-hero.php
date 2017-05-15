@@ -1,3 +1,8 @@
+<?php  
+global $background; 
+print_r($background);
+?>
+
 <section class="hero">
 	<?php site_background_image($background); ?>
 	<div class="content-container">

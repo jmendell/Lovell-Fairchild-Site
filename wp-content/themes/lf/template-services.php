@@ -15,7 +15,7 @@
 				$full_column = get_sub_field('full_column');
 				?>
 						
-					<?php if ($full_column || !$full_column && $i % 2 == 0): ?>
+					<?php if ($full_column || !$full_column && $i % 3 == 3): ?>
 					<div class="service-column">
 					<?php endif ?>
 					<div class="service">

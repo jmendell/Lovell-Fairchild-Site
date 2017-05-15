@@ -37,8 +37,8 @@ function setup() {
   add_image_size( 'client-small',  535, 500,  array( 'center', 'center' ) );
   add_image_size( 'client-medium', 800, 500,  array( 'center', 'center' ) );
   add_image_size( 'client-large',  1000, 500, false );
-  add_image_size( 'client-portait-thumb',  auto, 600, false );
-  add_image_size( 'client-landscape-thumb',  600, auto, false );
+  add_image_size( 'client-portait-thumb',  'auto', 600, false );
+  add_image_size( 'client-landscape-thumb',  600, 'auto', false );
 
   // Add post formats
   // http://codex.wordpress.org/Post_Formats

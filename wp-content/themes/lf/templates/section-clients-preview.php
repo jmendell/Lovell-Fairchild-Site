@@ -33,8 +33,8 @@
 <section class="clients-preview">
 	<div class="section-header">
 		<div class="content-container">
-			<h2 class="section-title">You know what you do.</h2>
-			<h2>We make sure your audiences know.</h2>
+			<h2 class="section-title"></h2>
+			<h2>In the 21st-century, communication is a vast power, and PR is the key. </h2>
 		</div>
 	</div>
 	<ul class="client-list">

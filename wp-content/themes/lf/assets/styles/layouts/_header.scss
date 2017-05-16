@@ -54,11 +54,11 @@
 			}
 			&:before{
 				top:50%;
-				@include transform(rotate(45deg) translateY(-50%));
+				@include transform(rotate(45deg) translateY(0%));
 			}
 			&:after{
 				top:50%;
-				@include transform(rotate(-45deg) translateY(-50%));
+				@include transform(rotate(-45deg) translateY(0%));
 			}
 		}
 	}

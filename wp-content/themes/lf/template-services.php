@@ -15,9 +15,7 @@
 				$full_column = get_sub_field('full_column');
 				?>
 						
-					<?php if ($full_column || !$full_column && $i % 3 == 3): ?>
-					<div class="service-column">
-					<?php endif ?>
+				
 					<div class="service">
 						<h2><img src="<?php echo $icon; ?>" alt="icon"> <?php echo $title; ?></h2>
 						<?php if( have_rows('sub_services')): ?>
@@ -36,9 +34,7 @@
 							</ul>
 						<?php endif; ?>
 					</div>
-					<?php if ($full_column || !$full_column && $i % 3 == 0): ?>
-					</div>
-					<?php endif ?>
+					
 		
 			<?php $i++; endwhile; ?>
 			</div>

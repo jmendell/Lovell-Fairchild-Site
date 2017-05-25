@@ -18,6 +18,9 @@ body{
 	font-weight:$lite;
 	-webkit-font-smoothing:antialiased;
 }
+span{
+	display:block;
+}
 
 h1,h2,h3,h4,h5,h6,p{
 	margin-top:0;
@@ -43,11 +46,12 @@ h3{
 	font-size:1.5em;
 	font-weight:$regular;
 	text-transform:uppercase;
+	margin-bottom:10px;
 }
 
 p{
 	line-height:1.6em;
-	margin-bottom:12.5px;
+	margin-bottom:12px;
 }
 
 .page-title{
@@ -59,12 +63,11 @@ p{
 
 .entry-title{
 	font-size:1em;
+	margin-left:30px;
 }
 
 .content{
 	p{
-		margin-bottom:12.5px;
-		letter-spacing:1px;
 		font-size:1.2em;
 	}
 }

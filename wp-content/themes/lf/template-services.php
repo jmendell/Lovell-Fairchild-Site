@@ -12,7 +12,7 @@
 			<?php $i = 1; while( have_rows('services') ): the_row(); 
 				$icon = get_sub_field('icon');
 				$title = get_sub_field('title');
-				$full_column = get_sub_field('full_column');
+				
 				?>
 						
 				

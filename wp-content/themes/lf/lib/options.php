@@ -2,7 +2,7 @@
 //get theme name
 $name = wp_get_theme();
 
-/*
+
 if( function_exists('acf_add_options_page') ) {
 	
 	// add sub page
@@ -14,4 +14,3 @@ if( function_exists('acf_add_options_page') ) {
 	//set title
 	acf_set_options_page_title( __($name) );
 }
-*/

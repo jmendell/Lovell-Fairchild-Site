@@ -10,8 +10,9 @@
 		
 				$icon = get_sub_field('icon');
 				$title = get_sub_field('title');
-				$copy = get_sub_field('copy');
-				$link = get_sub_field('link');
+				$sub = get_sub_field('sub_description');
+				$details= get_sub_field('details');
+
 		
 				?>
 
@@ -22,13 +23,13 @@
 						</div>
 					<?php endif ?>
 					<?php if ($title): ?>
-						<h3><?php echo $title; ?></h3>
+						<h2 class="title-copy"><?php echo $title; ?></h2>
 					<?php endif ?>
-					<?php if ($copy): ?>
-						<p><?php echo $copy; ?></p>
+					<?php if ($sub): ?>
+						<p><span class="accent-color-brand"><?php echo $sub; ?></span></p>
 					<?php endif ?>
-					<?php if ($link): ?>
-						<a href="<?php echo $link; ?>" class="cta-button">Learn More</a>
+					<?php if ($details): ?>
+						<p class="details-copy"><?php echo $details; ?></p>
 					<?php endif ?>
 				</li>
 		

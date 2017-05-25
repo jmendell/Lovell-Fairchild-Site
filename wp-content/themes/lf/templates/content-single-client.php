@@ -19,12 +19,12 @@
 					</div>
 					<?php endif ?>
 					<?php if ($url): ?>
-						<div>
-							<a href="<?php echo $url; ?>" class="cta-button">View Website</a>
+						<div class="web-button">
+							<a href="<?php echo $url; ?>" target="_blank" class="cta-button">View Website</a>
 						</div>
 					<?php endif ?>
 					<?php if ($press_url): ?>
-						<div>
+						<div class="press-button">
 							<a href="<?php echo $press_url; ?>" class="cta-button" target="_BLANK">Press Assets</a>
 						</div>
 					<?php endif ?>
@@ -39,7 +39,7 @@
 					</div>
 					<?php endif ?>
 					<?php if ($url): ?>
-						<a href="<?php echo $url; ?>" class="cta-button" target="_BLANK">View Website</a>
+						<a href="<?php echo $url; ?>" class="cta-button" target="_blank">View Website</a>
 					<?php endif ?>
 					<?php if ($press_url): ?>
 						<a href="<?php echo $press_url; ?>" class="cta-button" target="_BLANK">Press Assets</a>

@@ -5,6 +5,7 @@
 	text-transform:uppercase;
 	font-size:.85em;
 	padding:1em 4em;
+	margin:0 30px 15px;
 	transition:.2s;
 	letter-spacing:1px;
 	text-decoration:none;
@@ -12,6 +13,7 @@
 	background:$color-brand;
 	font-weight:$regular;
 	overflow:hidden;
+
 	&:hover{
 		&:after{
 			left:100%;

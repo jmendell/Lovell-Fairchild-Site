@@ -10,12 +10,14 @@
 			?>
 
 			<li>
-				<a href="<?php echo $link; ?>">
+				<a href="<?php echo $link; ?>" target="_blank">
 					<?php get_template_part('templates/svg/' . $social); ?>
-				</a>            
+				</a>
+            
 			</li>
 
 			<?php endwhile; ?>
 		</ul>
 	</div>
 <?php endif; ?>
+

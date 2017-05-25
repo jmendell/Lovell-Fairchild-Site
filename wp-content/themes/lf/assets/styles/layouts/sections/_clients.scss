@@ -14,6 +14,9 @@
 			@include media($tablet){
 				display:flex;
 				flex-direction:column-reverse;
+				@include media($mobile){
+					width:100%;
+				}
 			}
 			.col-6{
 				margin-bottom:25px;
@@ -23,7 +26,13 @@
 			}
 		}
 		.content{
-			margin-bottom:15px;
+			margin:30px 30px 30px;
+		}
+		.web-button,
+		.press-b{
+			@include media($mobile){
+			text-align:center;
+			}
 		}
 	}
 }
@@ -200,12 +209,19 @@
 		}
 	}
 	.more-clients{
-		display:block;
+		display:inline-block;
 		text-transform:uppercase;
 		text-decoration:none;
 		font-weight:$regular;
 		color:$color-black;
 		font-size:.9em;
+		&:hover{
+			color:$color-brand;
+		}
+	}
+	.arrow{
+		display:inline;
+		margin-left:5px;
 	}
 }
 
@@ -259,7 +275,7 @@
 			@include position(relative, initial null null initial);
 		}
 		h5{
-			font-size:1em;
+			font-size:1.2em;
 			text-transform:uppercase;
 			margin-bottom:0;
 			font-weight:$regular;
@@ -269,7 +285,10 @@
 			text-transform:uppercase;
 			text-decoration:none;
 			font-weight:$regular;
-			font-size:.8em;
+			font-size:1em;
+			&:hover{
+				color:$color-black;
+			}
 		}
 	}
 	.client-bg{

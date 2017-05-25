@@ -2,28 +2,24 @@
 
 	$feed_sizes = array(
 		0 => array(
-			'cols'  => 'cols-1-3',
-			'image' => 'client-small',
-		),
-		1 => array(
 			'cols'  => 'cols-2-3',
 			'image' => 'client-large',
 		),
+		1 => array(
+			'cols'  => 'cols-1-3',
+			'image' => 'client-small',
+		),
 		2 => array(
-			'cols'  => 'cols-2-4',
-			'image' => 'client-medium',
+			'cols'  => 'cols-1-3',
+			'image' => 'client-small',
 		),
 		3 => array(
-			'cols'  => 'cols-2-4',
-			'image' => 'client-medium',
+			'cols'  => 'cols-2-3',
+			'image' => 'client-large',
 		),
 		4 => array(
-			'cols'  => 'cols-1-3',
-			'image' => 'client-small',
-		),
-		5 => array(
-			'cols'  => 'cols-1-3',
-			'image' => 'client-small',
+			'cols'  => 'cols-2-4',
+			'image' => 'client-medium',
 		)
 	);
 
@@ -34,7 +30,7 @@
 	<div class="section-header">
 		<div class="content-container">
 			<h2 class="section-title"></h2>
-			<h2>In the 21st-century, communication is a vast power, and PR is the key. </h2>
+			<h2>Communication is a vast power, and PR is the key. </h2>
 		</div>
 	</div>
 	<ul class="client-list">
@@ -60,7 +56,7 @@
 		</li>
 
 	<?php $i++; endwhile; ?>
-	<a href="/clients" class="client-item alt cols-1-3">
+	<a href="/clients" class="client-item alt cols-2-4">
 			<div class="info">
 				<p>View</p>
 				<h3>All Clients</h3>

@@ -11,9 +11,10 @@
 		<div class="details">
 			<p class="site-title"><?php echo $title; ?></p>
 			<p><?php echo $address; ?></p>
+			<p><?php the_field('email', 'OPTIONS') ?></p>
 			<a href="tel:<?php echo $phone_clean; ?>">P: <?php echo $phone; ?></a>
 		</div>
-		<a href="/contact" class="cta-button">Get In Touch</a>
+		<a href="/contact" class="cta-button">Talk To Us</a>
 	</div>
 	<div class="footer-bottom">
 		<div class="content-container">

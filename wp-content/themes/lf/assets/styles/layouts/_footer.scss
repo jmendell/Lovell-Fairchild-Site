@@ -4,9 +4,9 @@ footer{
 		justify-content:center;
 		align-items:center;
 		flex-flow:column;
-		height:600px;
+		height:700px;
 		background-size:cover;
-		background-position:top center;
+		background-position:center center;
 		text-align:center;
 		@include media($tablet){
 			height:400px;

@@ -28,7 +28,7 @@
 						$args = array(
 							'post_type'      => 'clients',
 							'posts_per_page' => $client_count,
-							'orderby'        => 'menu_order',
+							'orderby'        => 'post_date',
 							'order'          => 'DEC',
 							'meta_query' => array(
 								array(
@@ -45,6 +45,7 @@
 							),
 						);
 						$loop = new WP_Query( $args );
+						print_r($args);
 					?>
 					<ul class="client-feed">
 					<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>

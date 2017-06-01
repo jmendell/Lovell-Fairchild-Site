@@ -25,8 +25,12 @@
 
     $i    = 0;
 
-$clients = get_terms( 'client_type' ); ?>
+$clients = get_terms( array(
+    'taxonomy' => 'client_type',
+    'exclude' => array(8),
+    )); 
 
+?>
  <section class="clients-preview">
     <div class="section-header">
         <div class="content-container">
@@ -38,35 +42,24 @@ $clients = get_terms( 'client_type' ); ?>
 <?php
 
 foreach($clients as $client) {
+
     wp_reset_query();
-    //print_r($custom_term);
+    
     $args = array('post_type' => 'clients',
         'tax_query' => array(
-                //'relation' => 'AND',
+               // 'relation' => 'AND',
             array(
                 'taxonomy' => 'client_type',
                 'field' => 'slug',
                 'terms' => $client->slug,
-                //'operator' => 'IN',
+                'operator' => 'IN',
             ),
-                // ONLY IF WE NEED A RELATIONSHIP BETWEEN TWO OR MORE TAXONOMIES
-                /*array(
-                    'taxonomy' => 'YOUR_CUSTOM_TAXONOMY',
-                    'field' => 'slug',
-                    'terms' => $featured_name,
-                    //'operator' => 'IN',
-                ),
-            ),*/
-            // THIS IS USED TO NOT INCLUDE CERTAIN TAXONOMY IDS
-            array(
-                'taxonomy' => 'client_type',
-                'field'    => 'term_id',
-                'terms' => array(8), // add in any taxonomy ID we don't want
-                'operator' => 'NOT IN',
-            ),
+               
         ),
         // ONLY WANT THE LATEST POST
         'posts_per_page' => 1, // only grab the latest post
+        'orderby' => 'menu_order',
+        'order'=>'ASC',
         
      );
 
@@ -75,21 +68,17 @@ foreach($clients as $client) {
     // print_r($loop);
      if($loop->have_posts()) { 
     
-
-
         while($loop->have_posts()) : $loop->the_post();
-        // var_dump($loop);
-
+        
          $cols = $feed_sizes[$i]['cols'];
          $image = $feed_sizes[$i]['image'];
-// print_r($post->ID);
-            //$desktopImage = get_field('promo_desktop_background_image');
+
         ?> <li class="client-item <?php echo $cols; ?>">
             <a href="<?php echo get_bloginfo('url')?>/client_type/<?php echo $client->slug; ?>">
                 <figure class="client-image" style="background-image:url('<?php echo get_the_post_thumbnail_url($post->ID, $image); ?>');"></figure>
                 <div class="info">
                     <h3><?php echo $client->name; ?></h3>
-                    <?php print_r($post->ID); ?>
+        
                 </div>
             </a>
          <?php

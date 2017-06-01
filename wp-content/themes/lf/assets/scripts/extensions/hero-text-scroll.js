@@ -33,7 +33,7 @@
 							triggerElement: '.tree',
 							duration: duration
 						})
-						.setPin(".title-wrap")
+						.setPin('.title-wrap')
 						.addTo(controller);
 				}
 

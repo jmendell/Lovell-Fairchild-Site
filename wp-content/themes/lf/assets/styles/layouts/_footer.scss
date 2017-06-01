@@ -13,7 +13,6 @@ footer{
 		}
 	}
 	.details{
-		margin-bottom:25px;
 		font-weight:$regular;
 		line-height:1;
 		@include media($mobile){
@@ -35,6 +34,15 @@ footer{
 			font-size:1.2em;
 			margin-bottom:15px;
 			letter-spacing:1px;
+		}
+		.footer-social{
+			margin:15px 0;
+			svg{
+				fill:$color-black;
+				&:hover{
+					fill:$color-brand;
+				}
+			}
 		}
 	}
 	.footer-bottom{

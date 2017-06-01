@@ -10,13 +10,14 @@
 		
 				$icon = get_sub_field('icon');
 				$title = get_sub_field('title');
-				$sub = get_sub_field('sub_description');
-				$details= get_sub_field('details');
+				$sub = get_sub_field('subtext');
+				$copy= get_sub_field('copy');
 
 		
 				?>
 
 				<li>
+				<div class="icon-title">
 					<?php if ($icon): ?>
 						<div class="bullet-image">
 							<img src="<?php echo $icon; ?>" alt="icon">
@@ -25,11 +26,12 @@
 					<?php if ($title): ?>
 						<h2 class="title-copy"><?php echo $title; ?></h2>
 					<?php endif ?>
+				</div>
 					<?php if ($sub): ?>
 						<p><span class="accent-color-brand"><?php echo $sub; ?></span></p>
 					<?php endif ?>
-					<?php if ($details): ?>
-						<p class="details-copy"><?php echo $details; ?></p>
+					<?php if ($copy): ?>
+						<p class="copy"><?php echo $copy; ?></p>
 					<?php endif ?>
 				</li>
 		

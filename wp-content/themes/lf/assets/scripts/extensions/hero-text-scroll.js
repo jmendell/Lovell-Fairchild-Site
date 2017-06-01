@@ -33,7 +33,7 @@
 							triggerElement: '.tree',
 							duration: duration
 						})
-						.setPin(".title-accent")
+						.setPin(".title-wrap")
 						.addTo(controller);
 				}
 

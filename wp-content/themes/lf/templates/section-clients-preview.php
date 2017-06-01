@@ -2,12 +2,12 @@
 
     $feed_sizes = array(
         0 => array(
-            'cols'  => 'cols-2-3',
-            'image' => 'client-large',
+            'cols'  => 'cols-2-4',
+            'image' => 'client-medium',
         ),
         1 => array(
-            'cols'  => 'cols-1-3',
-            'image' => 'client-small',
+            'cols'  => 'cols-2-4',
+            'image' => 'client-medium',
         ),
         2 => array(
             'cols'  => 'cols-1-3',
@@ -77,7 +77,8 @@ foreach($clients as $client) {
     
 
 
-        while($loop->have_posts()) : $loop->the_post(); 
+        while($loop->have_posts()) : $loop->the_post();
+        // var_dump($loop);
 
          $cols = $feed_sizes[$i]['cols'];
          $image = $feed_sizes[$i]['image'];
@@ -85,9 +86,10 @@ foreach($clients as $client) {
             //$desktopImage = get_field('promo_desktop_background_image');
         ?> <li class="client-item <?php echo $cols; ?>">
             <a href="<?php echo get_bloginfo('url')?>/client_type/<?php echo $client->slug; ?>">
-                <figure class="client-image" style="background-image:url(<?php echo get_the_post_thumbnail_url($post->ID, $image); ?>);"></figure>
+                <figure class="client-image" style="background-image:url('<?php echo get_the_post_thumbnail_url($post->ID, $image); ?>');"></figure>
                 <div class="info">
                     <h3><?php echo $client->name; ?></h3>
+                    <?php print_r($post->ID); ?>
                 </div>
             </a>
          <?php
@@ -108,7 +110,3 @@ foreach($clients as $client) {
         </li>
     </ul>
     </section>
-<?php
-
-
-?>

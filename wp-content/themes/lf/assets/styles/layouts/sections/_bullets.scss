@@ -31,8 +31,13 @@
     }
     li{
         text-align:left;
+        flex:1;
+        .icon-title{
+            display:flex;
+            align-items:center;
+        }
         &:first-child{
-            min-width:250px;
+            // min-width:250px;
             @include media($tablet){
                 padding:0;
             }
@@ -58,13 +63,18 @@
         align-items:center;
         height:100px;
         margin-bottom:25px;
+        display: flex;
+        margin-right: 15px;
+        img{
+            max-width:75px;
+        }
         @include media($mobile){
             margin-bottom:15px;
         }
     }
-        @include media($mobile){
-            margin-bottom:15px;
-        }
+    @include media($mobile){
+        margin-bottom:15px;
+    }
 }
 .video-bullets{
     ul{
@@ -90,8 +100,8 @@
             margin:0;
             height:200px;
             display:flex;
-            justify-content:left;
-            align-items:left;
+            justify-content:center;
+            align-items:center;
             background-size:cover;
         }
         img{

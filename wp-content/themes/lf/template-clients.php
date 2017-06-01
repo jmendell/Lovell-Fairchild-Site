@@ -45,7 +45,6 @@
 							),
 						);
 						$loop = new WP_Query( $args );
-						print_r($args);
 					?>
 					<ul class="client-feed">
 					<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>

@@ -21,8 +21,9 @@
 		height:650px;
 	}
 	.title-wrap{
-		z-index:2;
-		padding-top:calc(100vh - 600px);
+		z-index:4;
+		padding-top:calc(100vh - 500px);
+		width:650px !important;
 		@include media($desktop-short){
 			padding-top:calc(100vh - 650px);
 		}

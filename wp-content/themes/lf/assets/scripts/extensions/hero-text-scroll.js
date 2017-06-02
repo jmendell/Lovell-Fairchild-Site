@@ -22,7 +22,7 @@
 						screenWidth = $(window).width();
 
 					if (screenWidth > _o.breakpoint) {
-						_InitScene(treeHeight * .7);
+						_InitScene(treeHeight * 1);
 					}
 				},
 

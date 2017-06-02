@@ -10,11 +10,21 @@
 				}; 
 
 				var _o = {},
-					$scrollText = null
-				;
+				$scrollText = null;
 
 				var _InitObjects = function () {
 					_o = $.extend({}, defaults, o);
+				},
+
+				_InitScene = function (duration) {
+					var controller = new ScrollMagic.Controller();
+
+					new ScrollMagic.Scene({
+							triggerElement: '.tree',
+							duration: duration
+						})
+						.setPin('.title')
+						.addTo(controller);
 				},
 
 				_GetParams = function () {
@@ -26,16 +36,7 @@
 					}
 				},
 
-				_InitScene = function (duration) {
-					var controller = new ScrollMagic.Controller();
-
-					new ScrollMagic.Scene({
-							triggerElement: '.tree',
-							duration: duration
-						})
-						.setPin('.title-wrap')
-						.addTo(controller);
-				}
+				
 
 				_BindEvents = function () {
 					
@@ -58,3 +59,5 @@
 		});
 	};
 })(jQuery);
+
+

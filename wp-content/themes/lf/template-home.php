@@ -13,6 +13,15 @@
 			</video>
 			<figure style="background-image:url(<?php echo $bg[0]['mobile_image']['url'] ?>);" class="mobile-bg"></figure>
 			<img class="bg" src="<?php echo get_template_directory_uri(); ?>/dist/images/bg.jpg">
+			
+			<div class="flickeringStars">
+			  	<div><img src="<?php echo get_template_directory_uri(); ?>/dist/images/Stars.png"></div>
+			  	<div><img src="<?php echo get_template_directory_uri(); ?>/dist/images/Stars.png"></div>
+			  	<div><img src="<?php echo get_template_directory_uri(); ?>/dist/images/Stars.png"></div>
+			  	<div><img src="<?php echo get_template_directory_uri(); ?>/dist/images/Stars.png"></div>
+			  	<div><img src="<?php echo get_template_directory_uri(); ?>/dist/images/Stars.png"></div>
+			  	<div><img src="<?php echo get_template_directory_uri(); ?>/dist/images/Stars.png"></div>
+			</div>
 		</figure>
 		<figure class="tree" style="background-image:url(<?php echo get_template_directory_uri(); ?>/dist/images/tree.png);"></figure>
 		<div class="title-wrap">

@@ -33,7 +33,6 @@
 	</section>
 	<section class="team">
 		<div class="content-container">
-			<div class="col-5">
 				<div class="title">
 					<span class="section-title">Meet the team.</span>
 					<h2>Who you work with matters</h2>
@@ -41,29 +40,36 @@
 						<p><?php the_field('team_description'); ?></p>
 					</div>
 				</div>
-			</div>
-			<div class="col-7">
+				<?php get_template_part('templates/section', 'team-modal'); ?>
+
 				<?php if( have_rows('team')): ?>
 					<ul class="team-list">
-					<?php while( have_rows('team') ): the_row();
+					<?php $i = 0;
 
+					while( have_rows('team') ): 
+					$bio[] = get_sub_field('bio');
+					the_row();
+
+						$bio = $bio[$i];
+						print_r($bio);
 						$img = get_sub_field('image');
 						$name = get_sub_field('name');
 						$role = get_sub_field('role');
+						$i++;
 						?>
 
-						<li class="team-member">
-							<img src="<?php echo $img; ?>" alt="Team Member">
-							<div class="info">
-								<h4><?php echo $name; ?></h4>
-								<p><?php echo $role; ?></p>
-							</div>
+						<li class="team-member" data-index="<?php echo $bio[$i]; ?>">
+							<figure class="team-image" style="background-image:url('<?php echo $img; ?>');">
+								<div class="info">
+									<h4><?php echo $name; ?></h4>
+									<p><?php echo $role; ?></p>
+								</div>
+							</figure>
 						</li>
 
 					<?php endwhile; ?>
 					</ul>
 				<?php endif; ?>
-			</div>
 		</div>
 	</section>
 <?php endwhile; ?>

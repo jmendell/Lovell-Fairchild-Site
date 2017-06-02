@@ -23,7 +23,7 @@
 							triggerElement: '.tree',
 							duration: duration
 						})
-						.setPin('.title')
+						.setPin('.title-wrap')
 						.addTo(controller);
 				},
 
@@ -32,7 +32,7 @@
 						screenWidth = $(window).width();
 
 					if (screenWidth > _o.breakpoint) {
-						_InitScene(treeHeight * 1);
+						_InitScene(treeHeight * .95);
 					}
 				},
 

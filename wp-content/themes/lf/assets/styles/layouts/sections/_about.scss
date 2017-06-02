@@ -35,9 +35,9 @@
 		}
 		li{
 			position:relative;
-			flex:1 0 33.33333%;
-			max-width:calc((100% / 3) - #{$team-item-margin});
-			margin:0 $team-item-margin-half 25px $team-item-margin-half;
+			flex:1 0 23%;
+			max-width:calc((100% / 4) - #{$team-item-margin});
+			margin:10px;
 			@include media($desktop){
 				&:hover{
 					.info{
@@ -55,9 +55,14 @@
 					margin:0;
 				}
 			}
-			img{
-				display:block;
-				width:100%;
+			.team-image{
+				margin:0;
+	            height:300px;
+	            display:flex;
+	            justify-content:center;
+	            align-items:center;
+	            background-size:cover;
+	            background-position:center;
 			}
 			.info{
 				opacity:0;

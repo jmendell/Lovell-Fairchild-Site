@@ -22,8 +22,13 @@
 	}
 	.title-wrap{
 		z-index:4;
+<<<<<<< HEAD
 		padding-top:calc(100vh - 600px);
 		margin-top: -175px;
+=======
+		padding-top:calc(100vh - 500px);
+		width:650px !important;
+>>>>>>> c542b35ded00fba0127af51439273ac415e431d5
 		@include media($desktop-short){
 			padding-top:calc(100vh - 650px);
 		}

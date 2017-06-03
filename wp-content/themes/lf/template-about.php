@@ -47,24 +47,22 @@
 					<?php $i = 0;
 
 					while( have_rows('team') ): 
-					$bio[] = get_sub_field('bio');
 					the_row();
 
-						$bio = $bio[$i];
-						print_r($bio);
 						$img = get_sub_field('image');
 						$name = get_sub_field('name');
 						$role = get_sub_field('role');
+						$bio = get_sub_field('bio');
 						$i++;
 						?>
 
 						<li class="team-member" data-index="<?php echo $bio[$i]; ?>">
-							<figure class="team-image" style="background-image:url('<?php echo $img; ?>');">
-								<div class="info">
-									<h4><?php echo $name; ?></h4>
-									<p><?php echo $role; ?></p>
-								</div>
-							</figure>
+							<figure class="team-image" style="background-image:url('<?php echo $img; ?>');"></figure>
+							<div class="member-info">
+								<h4><?php echo $name; ?></h4>
+								<p><?php echo $role; ?></p>
+								<p class="member-bio"><?php echo $bio; ?></p>
+							</div>
 						</li>
 
 					<?php endwhile; ?>

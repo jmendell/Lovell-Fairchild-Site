@@ -24,9 +24,12 @@
 	@include media($tablet){
 		padding:50px 0;
 	}
+	.title{
+		margin-bottom:100px;
+	}
 	.team-list{
 		display:flex;
-		flex-flow:row wrap;
+		flex-direction: column;
 		@include striplist;
 		$team-item-margin:25px;
 		$team-item-margin-half:25px / 2;
@@ -35,8 +38,10 @@
 		}
 		li{
 			position:relative;
-			flex:1 0 23%;
-			max-width:calc((100% / 4) - #{$team-item-margin});
+			display: flex;
+			flex-direction:row;
+			// flex:1 0 23%;
+			// max-width:calc((100% / 4) - #{$team-item-margin});
 			margin:10px;
 			@include media($desktop){
 				&:hover{
@@ -56,37 +61,39 @@
 				}
 			}
 			.team-image{
-				margin:0;
+				flex:1;
+				margin:0 auto;
+				margin-right:25px;
 	            height:300px;
 	            display:flex;
 	            justify-content:center;
-	            align-items:center;
 	            background-size:cover;
 	            background-position:center;
 			}
-			.info{
-				opacity:0;
-				display:flex;
-				justify-content:center;
-				align-items:center;
-				flex-direction:column;
-				color:$color-white;
-				text-align:center;
-				padding:15px;
-				background:rgba(0,0,0,.6);
-				transition:.2s;
-				@include size(100%);
-				@include position(absolute, 50% null null 50%);
-				@include transform(translateY(-50%) translateX(-50%));
-				@include media($mobile){
-					position:relative;
-					top:initial;
-					left:initial;
-					opacity:1;
-					background:none;
-					color:$color-black;
-					@include transform(none);
-				}
+			.member-info{
+				width:75%;
+				// opacity:0;
+				// display:flex;
+				// justify-content:center;
+				// align-items:center;
+				// flex-direction:column;
+				// color:$color-white;
+				// text-align:center;
+				// padding:15px;
+				// background:rgba(0,0,0,.6);
+				// transition:.2s;
+				// @include size(100%);
+				// @include position(absolute, 50% null null 50%);
+				// @include transform(translateY(-50%) translateX(-50%));
+				// @include media($mobile){
+				// 	position:relative;
+				// 	top:initial;
+				// 	left:initial;
+				// 	opacity:1;
+				// 	background:none;
+				// 	color:$color-black;
+				// 	@include transform(none);
+				// }
 				h4{
 					margin-bottom:0;
 					font-family:$secondary;

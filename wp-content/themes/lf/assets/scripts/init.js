@@ -4,7 +4,7 @@ jQuery(document).toggleLogo();
 jQuery('.video-modal').videoModal();
 jQuery('.tree').scrollText();
 jQuery('input[type="checkbox"]').checkbox();
-jQuery('.team-modal').bioModal();
+// jQuery('.team-modal').bioModal();
 
 // jQuery(document).ready(function($){
 // 	$('.team-member').on('click', function(){

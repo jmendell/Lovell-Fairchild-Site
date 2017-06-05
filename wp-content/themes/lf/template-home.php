@@ -38,4 +38,6 @@
 	<?php if (is_array($video_bullets) && $video_bullets[0]): ?>		
 		<?php get_template_part('templates/section', 'video-bullets'); ?>
 	<?php endif ?>
+
+	<?php get_template_part('templates/section', 'media-slider'); ?>
 <?php endwhile; ?>

@@ -22,9 +22,6 @@
 				},
 
 				_BuildModal = function ($bioIndex) {
-					// var html = '<?php echo $bio['+$bioIndex+']; ?>';
-					// var html = 'hello';
-					// _o.inner.html(html);
 					_ShowModal();
 				},
 

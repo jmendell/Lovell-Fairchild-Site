@@ -44,6 +44,19 @@ footer{
 				}
 			}
 		}
+		.contact-info{
+			display: flex;
+			justify-content: center;
+			@include media($mobile){
+				flex-direction:column;
+			}
+			span{
+				margin:0 5px;
+				@include media($mobile){
+					display:none;
+				}
+			}
+		}
 	}
 	.footer-bottom{
 		padding:15px 0;

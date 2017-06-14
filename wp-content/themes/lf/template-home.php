@@ -12,17 +12,11 @@
 				<source src="/video/hero.mp4" type="video/mp4">
 			</video>
 			<figure style="background-image:url(<?php echo $bg[0]['mobile_image']['url'] ?>);" class="mobile-bg"></figure>
-			<img class="bg" src="<?php echo get_template_directory_uri(); ?>/dist/images/bg.jpg">
-			
-			<div class="flickeringStars">
-			  	<div><img src="<?php echo get_template_directory_uri(); ?>/dist/images/Stars.png"></div>
-			  	<div><img src="<?php echo get_template_directory_uri(); ?>/dist/images/Stars.png"></div>
-			  	<div><img src="<?php echo get_template_directory_uri(); ?>/dist/images/Stars.png"></div>
-			  	<div><img src="<?php echo get_template_directory_uri(); ?>/dist/images/Stars.png"></div>
-			  	<div><img src="<?php echo get_template_directory_uri(); ?>/dist/images/Stars.png"></div>
-			  	<div><img src="<?php echo get_template_directory_uri(); ?>/dist/images/Stars.png"></div>
-			</div>
-		</figure>
+				<img class="bg" src="<?php echo get_template_directory_uri(); ?>/dist/images/bg.jpg">
+
+				<?php get_template_part('templates/section', 'stars'); ?>
+
+			</figure>
 		<figure class="tree" style="background-image:url(<?php echo get_template_directory_uri(); ?>/dist/images/tree.png);"></figure>
 		<div class="title-wrap">
 			<h1 class="title">Where Messages</h1>

@@ -1,11 +1,14 @@
 (function($){
 	$('.media-slides').slick({
 		infinite: true,
-		slidesToShow: 4,
+		speed:2000,
+		slidesToShow: 5,
+		slidesToScroll: 1,
 		fade:false,
 		pauseOnHover:false,
 		autoplay:true,
-		autoplaySpeed:3000,
+		cssEasing: 'linear',
+		autoplaySpeed:0,
 		arrows: false,
 
 		responsive: [{

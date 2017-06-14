@@ -13,6 +13,9 @@
 				</div>
 				<div class="col-6">
 					<h1 class="entry-title"><?php the_title(); ?></h1>
+					<div class="trailer">
+						<?php the_field('trailer_url'); ?>
+					</div>
 					<?php if ('' !== $post->post_content): ?>
 					<div class="content">
 						<?php the_content(); ?>

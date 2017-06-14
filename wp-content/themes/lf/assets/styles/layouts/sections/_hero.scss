@@ -1,20 +1,25 @@
 .hero{
 	display:flex;
-	align-items:center;
+	align-items:flex-end;
 	position:relative;
 	text-align:center;
 	height:500px;
 	@include media($tablet){
 		height:400px;
 	}
+	.content-container{
+		h1{
+			font-size:75px;
+			color:$color-white;
+		}
+	}
 }
-
 .hero-tall{
 	position:relative;
 	display:flex;
 	justify-content:center;
 	align-items:center;
-	height:100vh;
+	height:80vh;
 	min-height:700px;
 	@include media($mobile){
 		min-height:650px;
@@ -22,7 +27,7 @@
 	}
 	.title-wrap{
 		z-index:4;
-		padding-top:calc(100vh - 500px);
+		padding-top:calc(100vh - 650px);
 		width:650px !important;
 		@include media($desktop-short){
 			padding-top:calc(100vh - 650px);
@@ -76,74 +81,6 @@
 				display:block;
 			}
 		}
-
-		.flickeringStars {
-			height: 100%;
-			width: 100%;
-			position: absolute;
-			overflow: hidden;
-			top: -5.5px;
-			opacity: .6;
-
-
-			div {
-				position:absolute;
-				width: 50%;
-				height: 100%;
-			}
-
-			div:nth-child(1) {
-				top: -200px; 
-				left: 2px; 
-				animation: fade 3s 5s infinite;
-			}
-			div:nth-child(2) {
-				top: 24px; 
-				right: -105px; 
-				animation: fade 2s 2s infinite;
-			}
-			div:nth-child(3){
-				top: 2px; 
-				right: 3px; 
-				animation: fade 10s 1s infinite;
-				transform: rotate(180deg);
-			}
-			div:nth-child(4){
-				top: 136px; 
-				left: 376px; 
-				animation: fade 6s 1s infinite;
-				transform: rotate(-60deg);
-			}
-			div:nth-child(5) {
-				top: 39px; 
-				right: 71px; 
-				animation: fade 5s 5s infinite;
-			}
-			div:nth-child(6) {
-				top: 64px; 
-				left: 165px; 
-				animation: fade 9s 3s infinite;
-			}
-
-			@-webkit-keyframes fade {
-				0% {
-					opacity: 1;
-				}
-				50% {
-					opacity: 0;
-				}
-				100% {
-					opacity: 1;
-				}
-			}
-
-
-
-		}
-
-
-
-
 		.bg{
 			opacity:.7;
 			@include size(100%);

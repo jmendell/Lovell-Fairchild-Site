@@ -7,7 +7,7 @@
 		'post_type'      => 'clients',
 		'posts_per_page' => -1,
 		'orderby'        => 'menu_order',
-		'order'          => 'DEC',
+		'order'          => 'ASC',
 		'tax_query' => array(
 			array(
 				'taxonomy' => 'client_type',
@@ -25,11 +25,11 @@
 			<?php
 				//Getting the correct orientation if a thumbnail exists.
 				// Otherwise using the defualt image
-				if (has_post_thumbnail() && get_field('portrait_image')) {
+				if (has_post_thumbnail()) {
 					if ($image_orientation == "landscape") {
 						$image = get_the_post_thumbnail_url(null, 'client-landscape-thumb');
 					}else{
-						$image = get_field('portrait_image')['sizes']['client-portait-thumb'];
+						$image = get_the_post_thumbnail_url(null, 'client-portrait-thumb');
 					}
 				}else{
 					$image = get_field('clients_default_image', 'OPTIONS');

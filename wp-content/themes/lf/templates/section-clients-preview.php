@@ -10,16 +10,16 @@
             'image' => 'client-medium',
         ),
         2 => array(
-            'cols'  => 'cols-1-3',
+            'cols'  => 'cols-1-4',
             'image' => 'client-small',
         ),
         3 => array(
-            'cols'  => 'cols-2-3',
-            'image' => 'client-large',
-        ),
-        4 => array(
             'cols'  => 'cols-2-4',
             'image' => 'client-medium',
+        ),
+        4 => array(
+            'cols'  => 'cols-1-4',
+            'image' => 'client-small',
         )
     );
 
@@ -72,10 +72,10 @@ foreach($clients as $client) {
         
          $cols = $feed_sizes[$i]['cols'];
          $image = $feed_sizes[$i]['image'];
-
+         $poster = get_field('portrait_image', $post->ID);
         ?> <li class="client-item <?php echo $cols; ?>">
             <a href="<?php echo get_bloginfo('url')?>/client_type/<?php echo $client->slug; ?>">
-                <figure class="client-image" style="background-image:url('<?php echo get_the_post_thumbnail_url($post->ID, $image); ?>');"></figure>
+                <figure class="client-image" style="background-image:url('<?=$poster['url']?>');"></figure>
                 <div class="info">
                     <h3><?php echo $client->name; ?></h3>
         
@@ -90,7 +90,7 @@ foreach($clients as $client) {
 }
 
 ?>
-        <li class="client-item alt cols-2-4"><a href="/clients">
+        <li class="client-item alt view-all"><a href="/clients">
             <div class="info">
                 <p>View</p>
                 <h3>All Clients</h3>

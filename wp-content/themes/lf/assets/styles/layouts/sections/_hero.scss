@@ -30,7 +30,7 @@
 		padding-top:calc(100vh - 650px);
 		width:650px !important;
 		@include media($desktop-short){
-			padding-top:calc(100vh - 650px);
+			padding-top:calc(100vh - 550px);
 		}
 		@include media($mobile){
 			width:$mobile-inner;

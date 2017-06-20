@@ -35,3 +35,78 @@
 		font-weight:$regular;
 	}
 }
+
+//Video Bullet Arrows
+.slider-button{
+	position:relative;
+	z-index:2;
+	background:rgba(0,0,0,.3);
+	cursor:pointer;
+	transition:.2s;
+	@include size(80px);
+	@include position(absolute, 50% null null null);
+	@include transform(translateY(-50%));
+	@include media($mobile){
+		display:none !important;
+	}
+	&:hover{
+		background:rgba(255,255,255,.3);
+	}
+	&.prev{
+		&:hover{
+			.button-inner{
+				left:47%
+			}
+		}
+	}
+	&.next{
+		right:0;
+		&:hover{
+			.button-inner{
+				left:52%;
+			}
+		}
+	}
+	.button-inner{
+		position:absolute;
+		height:30px;
+		width:55px;
+		transition:.5s;
+		@include position(absolute, 50% null null 50%);
+		@include transform(translateY(-50%) translateX(-50%));
+	}
+	.arrow{
+		position:absolute;
+		top:0;
+		@include size(30px);
+		&:before, &:after{
+			content:'';
+			display:block;
+			position:absolute;
+			border-radius:3px;
+			@include size(30px);
+		}
+		&.prev{
+			left:0;
+			border-left:5px solid $color-white;
+			border-bottom:5px solid $color-white;
+			border-radius:3px;
+			transform:rotate(45deg);
+		}
+		&.next{
+			right:0;
+			border-right:5px solid $color-white;
+			border-top:5px solid $color-white;
+			border-radius:3px;
+			transform:rotate(45deg);
+		}
+	}
+	.center-line{
+		height:4px;
+		width:100%;
+		background: $color-white;
+		border-radius:3px;
+		@include position(absolute, 50% null null 50%);
+		@include transform(translateY(-50%) translateX(-50%));
+	}
+}

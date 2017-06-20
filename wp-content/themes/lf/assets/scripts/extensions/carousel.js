@@ -34,3 +34,32 @@
 	    }]
 	});
 })(jQuery);
+
+(function($){
+	$('.vid-slides').slick({
+		infinite: true,
+		slidesToScroll: 1,
+		slidesToShow:4,
+		autoplay:false,
+		prevArrow:'<div class="slider-button prev"><div class="button-inner"><span class="arrow prev"></span><span class="center-line"></span></div></div>',
+		nextArrow:'<div class="slider-button next"><div class="button-inner"><span class="arrow next"></span><span class="center-line"></span></div></div>',
+
+	responsive: [{
+
+	      breakpoint: 770,
+	      settings: {
+	        slidesToShow: 2,
+	        arrows:false
+	      }
+
+	    }, {
+
+	      breakpoint: 600,
+	      settings: {
+	        slidesToShow: 1,
+	        arrows:false
+	      }
+
+	    }]
+	});
+})(jQuery);

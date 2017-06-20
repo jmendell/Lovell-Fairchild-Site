@@ -76,23 +76,32 @@
         margin-bottom:15px;
     }
 }
+
 .video-bullets{
     ul{
-        display:flex;
-        flex-flow:row wrap;
         @include striplist;
-        li{
-            flex:1;
-            cursor:pointer;
-            @include media($tablet){
-                flex:1 0 50%;
+        .vid-slides{
+            display:flex;
+            flex-flow:row wrap;
+            position:relative;
+            .slick-list{
+                overflow:hidden;
             }
-            @include media($mobile){
-                flex:1 0 100%;
+            .slick-track{
+                display: flex;
             }
-            &:hover{
-                img{
-                    @include transform(scale(1.05));
+            li{
+                cursor:pointer;
+                @include media($tablet){
+                    // flex:1 0 50%;
+                }
+                @include media($mobile){
+                    // flex:1 0 100%;
+                }
+                &:hover{
+                    img{
+                        @include transform(scale(1.05));
+                    }
                 }
             }
         }

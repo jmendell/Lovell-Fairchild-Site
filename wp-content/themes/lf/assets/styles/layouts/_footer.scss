@@ -39,8 +39,29 @@ footer{
 			margin:15px 0;
 			svg{
 				fill:$color-black;
-				&:hover{
-					fill:$color-brand;
+			}
+			.facebook{
+				transition: .2s;
+				svg{
+					&:hover{
+						fill: $color-fb;
+					}
+				}
+			}
+			.instagram{
+				transition: .2s;
+				svg{
+					&:hover{
+						fill: $color-insta;
+					}
+				}
+			}
+			.twitter{
+				transition: .2s;
+				svg{
+					&:hover{
+						fill: $color-twit;
+					}
 				}
 			}
 		}

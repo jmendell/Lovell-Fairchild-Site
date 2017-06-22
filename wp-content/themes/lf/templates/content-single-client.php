@@ -21,14 +21,14 @@
 						<?php the_content(); ?>
 					</div>
 					<?php endif ?>
-					<?php if ($url): ?>
-						<div class="web-button">
-							<a href="<?php echo $url; ?>" target="_blank" class="cta-button">View Website</a>
-						</div>
-					<?php endif ?>
 					<?php if ($press_url): ?>
 						<div class="press-button">
 							<a href="<?php echo $press_url; ?>" class="cta-button" target="_BLANK">Press Assets</a>
+						</div>
+					<?php endif ?>
+					<?php if ($url): ?>
+						<div class="web-button">
+							<a href="<?php echo $url; ?>" target="_blank" class="cta-button">View Website</a>
 						</div>
 					<?php endif ?>
 				</div>

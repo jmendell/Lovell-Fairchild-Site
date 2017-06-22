@@ -6,14 +6,14 @@
 			//declare variables
 			$social = get_sub_field('social_network');
 			$link = get_sub_field('link');
+			$class = get_sub_field('class');
 
 			?>
 
 			<li>
-				<a href="<?php echo $link; ?>" target="_blank">
+				<a href="<?php echo $link; ?>" target="_blank" class="<?php echo $class; ?>">
 					<?php get_template_part('templates/svg/' . $social); ?>
 				</a>
-            
 			</li>
 
 			<?php endwhile; ?>

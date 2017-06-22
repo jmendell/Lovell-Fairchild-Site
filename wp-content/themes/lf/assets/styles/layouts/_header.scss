@@ -1,15 +1,16 @@
 .header{
 	z-index:10;
-	&.position-absolute{
-		width:100%;
-		@include position(absolute, 0 null null 0);
-	}
+	// &.position-absolute{
+	// 	width:100%;
+	// 	@include position(absolute, 0 null null 0);
+	// }
 	.container{
 		display:flex;
 		justify-content:space-between;
 		width:90%;
 		margin:0 auto;
 		padding:35px 0;
+		transition: .3s;
 	}
 	.menu-options{
 		display:flex;
@@ -22,6 +23,7 @@
 	}
 	.brand{
 		z-index:10;
+		transition: .3s;
 		@include media($mobile){
 			max-width:225px;
 		}
@@ -81,6 +83,24 @@
 			.center-line, &:before, &:after{
 				background:$color-black;
 			}
+		}
+	}
+}
+
+header{
+	position:fixed;	
+	width:100%;
+	&.scrolled{
+		background-color:rgba(0,0,0,1);
+		.brand{
+			transition:.3s;
+			transform:scale(.7);
+		}
+		.cta-button{
+			padding:.8em 1em;
+		}
+		.container{
+			padding:15px 0;
 		}
 	}
 }

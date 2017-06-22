@@ -65,14 +65,10 @@
 							<a href="<?php the_permalink(); ?>">
 								<figure class="client-bg" style="background-image:url(<?php echo $image; ?>);"></figure>
 								<div class="info">
-								php <?php if (!has_post_thumbnail()): ?>
-									<h5 class="coming-soon">Coming Soon</h5>
-								<?php else: ?>
 									<div>
 										<?php the_title('<h5>', '</h5>'); ?>
 										<span class="accent-color-brand more">(Read More)</span>
 									</div>
-								<?php endif ?>
 								</div>
 							</a>
 						</li>

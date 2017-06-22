@@ -37,7 +37,11 @@
 			?>
 			<li class="client image-orientation-<?php echo $image_orientation ?>">
 				<a href="<?php the_permalink(); ?>">
-					<figure class="client-bg" style="background-image:url(<?php echo $image; ?>);"></figure>
+					<figure class="client-bg" style="background-image:url(<?php echo $image; ?>);">
+						<?php if (!has_post_thumbnail()): ?>
+							<h3 class="coming-soon">Coming Soon: <p class="cs-title"><?php echo the_title(); ?></p></h3>
+						<?php endif ?>
+					</figure>
 					<div class="info">
 						<div>
 							<?php the_title('<h5>', '</h5>'); ?>

@@ -327,11 +327,21 @@
 		background-size:cover;
 		z-index:1;
 		@include size(100%);
-		@include position(absolute, 50% null null 50%);
+		@include position(relative, 50% null null 50%);
 		@include transform(translateY(-50%) translateX(-50%));
 		@include media($tablet){
 			@include position(relative, initial null null initial);
 			@include transform(none);
+		}
+		.coming-soon{
+			@include position(absolute, 50% null null 50%);
+			@include transform(translateY(-50%) translateX(-50%));
+			width: 100%;
+			color:$color-black;
+			text-align: center;
+			.cs-title{
+				font-size:.7em;
+			}
 		}
 	}
 	.image-orientation-portrait{

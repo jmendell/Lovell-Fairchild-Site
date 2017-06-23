@@ -26,9 +26,8 @@
     $i    = 0;
 
 $clients = get_terms( array(
-    'taxonomy' => 'client_type',
-    'exclude' => array(8),
-    )); 
+    'taxonomy' => 'client_type'
+)); 
 
 ?>
  <section class="clients-preview">
@@ -72,7 +71,9 @@ foreach($clients as $client) {
         
          $cols = $feed_sizes[$i]['cols'];
          $image = $feed_sizes[$i]['image'];
-         $poster = get_field('portrait_image', $post->ID);
+         // get acf for taxonomy image
+         $poster = get_field('client_type_image', $client);
+        
         ?> <li class="client-item <?php echo $cols; ?>">
             <a href="<?php echo get_bloginfo('url')?>/client_type/<?php echo $client->slug; ?>">
                 <figure class="client-image" style="background-image:url('<?=$poster['url']?>');"></figure>

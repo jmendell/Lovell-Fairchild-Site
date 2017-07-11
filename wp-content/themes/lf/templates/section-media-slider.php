@@ -1,5 +1,5 @@
 <section class="media-slider">
-<h2 class="section-title">Media Partners</h2>
+<h2 class="section-title"><?php echo get_field('media_slider_heading', $post->ID); ?></h2>
 	<?php if( have_rows('media_slides')): ?>
 		<div class="media-slides">
 			<?php while( have_rows('media_slides') ): the_row(); 

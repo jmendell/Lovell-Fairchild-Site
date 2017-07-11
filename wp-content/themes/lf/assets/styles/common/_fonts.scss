@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700'); //Montserrat
 @import url('https://fonts.googleapis.com/css?family=Cinzel'); //Cinzel
+@import url('https://fonts.googleapis.com/css?family=Catamaran');//Catamaran
 
 $primary:'Montserrat';
 $secondary:'Cinzel';
@@ -18,9 +19,7 @@ body{
 	font-weight:$lite;
 	-webkit-font-smoothing:antialiased;
 }
-span{
-	display:block;
-}
+
 
 h1,h2,h3,h4,h5,h6,p{
 	margin-top:0;

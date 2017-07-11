@@ -11,6 +11,12 @@
 	display:flex;
 	justify-content:center;
 	align-items:center;
+	.content-container{
+		z-index: 1;
+	}
+	.overlay{
+		background-color:rgba(0,0,0,.3);
+	}
 	h3{
 		max-width:600px;
 		color:$color-white;
@@ -51,6 +57,9 @@
 				}
 			}
 			@include media($mobile){
+				flex-direction:column;
+			}
+			@include media($mobile){
 				flex:1;
 				max-width:initial;
 				&:not(:last-child){
@@ -69,38 +78,31 @@
 	            justify-content:center;
 	            background-size:cover;
 	            background-position:center;
+	            @include media($mobile){
+	            	margin:0;
+	            	margin-bottom:10px;
+	            	background-position:top center;
+	            }
 			}
 			.member-info{
 				width:75%;
-				// opacity:0;
-				// display:flex;
-				// justify-content:center;
-				// align-items:center;
-				// flex-direction:column;
-				// color:$color-white;
-				// text-align:center;
-				// padding:15px;
-				// background:rgba(0,0,0,.6);
-				// transition:.2s;
-				// @include size(100%);
-				// @include position(absolute, 50% null null 50%);
-				// @include transform(translateY(-50%) translateX(-50%));
-				// @include media($mobile){
-				// 	position:relative;
-				// 	top:initial;
-				// 	left:initial;
-				// 	opacity:1;
-				// 	background:none;
-				// 	color:$color-black;
-				// 	@include transform(none);
-				// }
+				@include media($tablet){
+					width:60%;
+				}
+				@include media($mobile){
+					width: 100%;
+				}
 				h4{
 					margin-bottom:0;
 					font-family:$secondary;
 					font-size:1.2em;
 				}
-				p{
+				.member-bio{
+					font-size:1.1em;
 					line-height:1.2;
+					@include media($mobile){
+						font-size:1em;
+					}
 				}
 			}
 		}

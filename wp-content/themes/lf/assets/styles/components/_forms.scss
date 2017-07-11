@@ -23,6 +23,14 @@ form{
 	}
 }
 
+
+input[type="text"]{
+	&:focus{
+		outline:none;
+	}
+}
+
+
 #{$all-text-inputs} {
 	appearance:none;
 	width:100%;
@@ -44,6 +52,9 @@ form{
 
 textarea{
 	border: 2px solid white;
+	&:focus{
+		outline:none;
+	}
 }
 
 input[type="submit"]{

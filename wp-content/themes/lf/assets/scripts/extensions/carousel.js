@@ -58,8 +58,23 @@
 	      settings: {
 	        slidesToShow: 1,
 	        arrows:false
-	      }
+	      },
 
 	    }]
+	  
+	});
+})(jQuery);
+
+//Testimonial Slider
+(function($){
+	$('.testimonial-slider').slick({
+	  slidesToShow: 1,
+	  slidesToScroll: 1,
+	  infinite:true,
+	  fade:true,
+	  autoplay:true,
+	  autoplaySpeed:3500,
+	  arrows:false,
+	  dots:true,
 	});
 })(jQuery);

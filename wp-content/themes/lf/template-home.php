@@ -22,12 +22,14 @@
 			<h1 class="title">Where Messages</h1>
 			<h1 class="title-accent">Grow Mighty</h1>
 		</div>
+		
 	</section>
 	<?php get_template_part('templates/section', 'clients-preview'); ?>
 	<?php $bullets = get_field('bullet_items'); ?>
 	<?php if (is_array($bullets) && $bullets[0]): ?>		
 		<?php get_template_part('templates/section', 'bullets'); ?>
 	<?php endif ?>
+	<?php get_template_part('templates/section', 'testimonial-slider'); ?>
 	<?php $video_bullets = get_field('video_bullets'); ?>
 	<?php if (is_array($video_bullets) && $video_bullets[0]): ?>		
 		<?php get_template_part('templates/section', 'video-bullets'); ?>

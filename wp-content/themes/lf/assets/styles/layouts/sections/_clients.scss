@@ -6,7 +6,7 @@
 		}
 	}
 	article.clients{
-		padding:100px 0;
+		padding:150px 0 100px 0;
 		@include media($tablet){
 			padding:50px 0;
 		}
@@ -62,9 +62,26 @@
 		text-align:center;
 		padding:75px 0;
 		h2{
-			margin-bottom:10px;
+			margin-bottom:0;
 			color:$color-black;
 			font-weight:$regular;
+		}
+	}
+	.testimonial-slides{
+		padding-bottom:75px;
+		width:75vw;
+		margin:0 auto;
+		.slick-track{
+			display: flex;
+			align-items: center;
+		}
+		.slick-list{
+			overflow:hidden;
+		}
+		.test-slide{
+			p{
+				font-size:1em;
+			}
 		}
 	}
 	.client-list{

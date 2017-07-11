@@ -16,7 +16,7 @@
 		
 				?>
 
-				<li>
+				<li class="bullet-content">
 				<div class="icon-title">
 					<?php if ($icon): ?>
 						<div class="bullet-image">
@@ -27,11 +27,11 @@
 						<h2 class="title-copy"><?php echo $title; ?></h2>
 					<?php endif ?>
 				</div>
-					<?php if ($sub): ?>
-						<p><span class="accent-color-brand"><?php echo $sub; ?></span></p>
-					<?php endif ?>
 					<?php if ($copy): ?>
 						<p class="copy"><?php echo $copy; ?></p>
+					<?php endif ?>
+					<?php if ($sub): ?>
+						<p><span class="accent-color-brand"><?php echo $sub; ?></span></p>
 					<?php endif ?>
 				</li>
 		

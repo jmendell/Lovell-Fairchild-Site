@@ -1,5 +1,5 @@
 .bullets{
-    padding:100px 0;
+    padding:50px 0;
     @include media($tablet){
         padding:15px 0;
     }
@@ -29,12 +29,26 @@
             flex-direction:column;
         }
     }
-    li{
+    .bullet-content{
         text-align:left;
         flex:1;
         .icon-title{
             display:flex;
             align-items:center;
+        }
+        //Bullets inside bullet items
+        ul{
+            flex-direction:column;
+            padding:0 10px;
+            color:$color-brand-dark;
+            li{
+                margin:5px 0;
+                list-style: initial;
+                font-weight:500;
+            }
+        }
+        .copy{
+            // color:$color-brand-dark;
         }
         &:first-child{
             // min-width:250px;

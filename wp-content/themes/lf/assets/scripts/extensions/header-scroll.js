@@ -8,7 +8,7 @@
 
 			scroll = (function ($c, o) {
 				var defaults = {
-					'entryPoint':400,
+					'entryPoint':100,
 					'scrollClass':'scrolled'
 				}; 
 

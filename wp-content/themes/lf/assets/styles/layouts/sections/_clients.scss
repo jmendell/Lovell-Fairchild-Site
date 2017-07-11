@@ -424,6 +424,10 @@
 // Taxonomy page
 .client-type-full-list{
 	padding:100px 0;
+
+	.title--taxonomy {
+		margin: 50px 0 20px;
+	}
 	@include media($tablet){
 		padding:50px 0;
 	}

@@ -19,7 +19,9 @@
 	$loop = new WP_Query( $args );
 ?>
 <section class="client-type-full-list">
+
 	<div class="content-container">
+		<h2 class="title--taxonomy"><?=$term_object->name?></h2>
 		<ul class="client-feed">
 		<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 			<?php

@@ -3,6 +3,8 @@
 	$term_settings = json_decode($term_object->description)[0];
 	$image_orientation = $term_settings->image ?: 'portrait';
 
+	$term = get_the_terms();
+
 	$args = array(
 		'post_type'      => 'clients',
 		'posts_per_page' => -1,
@@ -12,14 +14,16 @@
 			array(
 				'taxonomy' => 'client_type',
 				'field'    => 'term_id',
-				'terms'    => get_queried_object()
+				'terms'    => $term_object->term_id
 			)
 		),
 	);
 	$loop = new WP_Query( $args );
 ?>
-<section class="client-type-full-list">
+
+<section class="client-type-full-list type client-types">
 	<div class="content-container">
+		<h3 class="section-title" style="padding-top: 80px;"><?php echo $term_object->name; ?></h3>
 		<ul class="client-feed">
 		<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 			<?php

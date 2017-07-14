@@ -25,6 +25,13 @@ body{
     background-size:cover;
     background-repeat: no-repeat;
     background-position:center;
+
+    @include media($desktop){
+    	&.background--move100 {
+    		background-position: center -10vw;
+    	}
+    }
+    
 }
 
 img{

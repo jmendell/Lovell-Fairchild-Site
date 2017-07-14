@@ -29,7 +29,7 @@
 							'post_type'      => 'clients',
 							'posts_per_page' => $client_count,
 							'orderby'        => 'menu_order',
-							'order'          => '{he}',
+							'order'          => 'ASC',
 							'meta_query' => array(
 								array(
 									'key' => '_thumbnail_id',

@@ -20,17 +20,12 @@
 	);
 	$loop = new WP_Query( $args );
 ?>
-<<<<<<< HEAD
-<section class="client-type-full-list">
 
-	<div class="content-container">
-		<h2 class="title--taxonomy"><?=$term_object->name?></h2>
-=======
 
 <section class="client-type-full-list type client-types">
 	<div class="content-container">
 		<h3 class="section-title" style="padding-top: 80px;"><?php echo $term_object->name; ?></h3>
->>>>>>> staging
+
 		<ul class="client-feed">
 		<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 			<?php

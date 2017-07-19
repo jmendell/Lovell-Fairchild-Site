@@ -340,7 +340,11 @@
 	}
 	.client-bg{
 		margin:0;
+<<<<<<< HEAD
 		background-position:top center;
+=======
+		background-position:center top;
+>>>>>>> staging
 		background-size:cover;
 		z-index:1;
 		@include size(100%);

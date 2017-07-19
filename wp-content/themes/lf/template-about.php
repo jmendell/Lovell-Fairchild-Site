@@ -24,7 +24,7 @@
 	</section>
 	<section class="slogan-section">
 	<div class="overlay"></div>
-		<figure class="background">
+		<figure class="background background--move100">
 			<img src="<?php echo get_template_directory_uri() ?>/assets/images/loader.png" class="responsive" alt="" data-src='{"m":"<?php echo get_field('background_image')[1]['mobile_image']['url']; ?>","d":"<?php echo get_field('background_image')[1]['desktop_image']['url']; ?>"}'/>
 			<img src="<?php echo get_template_directory_uri() ?>/assets/images/loader.png" alt="background">
 		</figure>

@@ -31,3 +31,5 @@ function site_load_scripts() {
 	wp_enqueue_script('waypoints', false, [], null, true);
 }
 add_action( 'init', 'site_load_scripts' );
+
+

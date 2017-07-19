@@ -105,6 +105,14 @@ header{
 	}
 }
 
+.post-type-clients {
+	header {
+		&.scrolled {
+			background-color: #fff;
+		}
+	}
+}
+
 // .post-type-clients{
 // 	header{
 // 		background:$color-black;

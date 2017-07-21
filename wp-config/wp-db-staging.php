@@ -18,19 +18,19 @@ if (!defined('ABSPATH')) exit();
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'lovell_fairchild');
+define('DB_NAME', 'sandoval_lovell');
 /** MySQL database username */
-define('DB_USER', 'root');
+define('DB_USER', 'sandoval_lovell');
 /** MySQL database password */
-define('DB_PASSWORD', 'root');
+define('DB_PASSWORD', 'Rockon08!');
 /** MySQL hostname */
 define('DB_HOST', 'localhost');
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
 /** The Database Collate type. Don't change this if in doubt. */
 define('DB_COLLATE', '');
-define('WP_HOME','http://lovell-fairchild.dev');
-define('WP_SITEURL','http://lovell-fairchild.dev');
+define('WP_HOME','http://lf.sandovalcustom.website');
+define('WP_SITEURL','http://lf.sandovalcustom.website');
 define('FS_METHOD', 'direct');
 
 
@@ -54,13 +54,6 @@ define('NONCE_SALT',       'D@nvLWtdu7@+H!Yb2d6K<O5gw.jK6[/.g4nKO%r,t2M=X-L==$W9
 
 /**#@-*/
 
-/**
- * WordPress Database Table prefix.
- *
- * You can have multiple installations in one database if you give each a unique
- * prefix. Only numbers, letters, and underscores please!
- */
-$table_prefix  = 'wp_';
 
 /**
  * For developers: WordPress debugging mode.

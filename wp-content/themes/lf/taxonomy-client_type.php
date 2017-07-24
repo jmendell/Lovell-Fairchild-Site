@@ -1,9 +1,10 @@
 <?php
+	global $post;
 	$term_object = get_queried_object();
 	$term_settings = json_decode($term_object->description)[0];
 	$image_orientation = $term_settings->image ?: 'portrait';
 
-	$term = get_the_terms();
+	//$term = get_the_terms($post->ID);
 
 	$args = array(
 		'post_type'      => 'clients',

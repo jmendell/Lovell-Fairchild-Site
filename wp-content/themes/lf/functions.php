@@ -29,3 +29,9 @@ foreach ($sage_includes as $file) {
   require_once $filepath;
 }
 unset($file, $filepath);
+
+
+add_filter( 'the_content', 'remove_br_gallery', 11, 2);
+function remove_br_gallery($output) {
+    return preg_replace('/\<br[^\>]*\>/','',$output);
+}

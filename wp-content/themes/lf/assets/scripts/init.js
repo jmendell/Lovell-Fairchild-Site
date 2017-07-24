@@ -4,4 +4,3 @@ jQuery(document).toggleLogo();
 jQuery('.video-modal').videoModal();
 jQuery('.tree').scrollText();
 jQuery('input[type="checkbox"]').checkbox();
-

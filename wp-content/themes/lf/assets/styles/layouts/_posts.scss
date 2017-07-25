@@ -1,0 +1,110 @@
+.post-type-post {
+	.theme-default {
+		background: $color-black;
+	}
+}
+
+.news-content {
+	padding-top: 175px;
+}
+
+.post {
+	margin-bottom: 10px;
+	padding-bottom: 50px;
+	border-bottom: 1px solid #ddd;
+	
+
+	.entry-title {
+		margin: 0 20px 5px 0;
+
+		a {
+			color: $color-brand;
+			text-decoration: none;
+		}
+	}
+
+	h1.entry-title {
+		font-size: 3rem;
+	}
+	h2.entry-title {
+		font-size: 1.5rem;
+	}
+
+	.updated {
+		font-style: italic;
+		font-size: 1rem;
+		color: #999;
+		display: inline-block;
+		margin-bottom: 10px;
+	}
+
+
+
+	&.single-post {
+		.updated {
+			margin-bottom: 20px;
+		}
+	}
+
+
+	.comments {
+		margin-top: 60px;
+
+		.comment-form-comment {
+			label {
+				color: $color-black;
+			}
+			textarea {
+				border: 1px solid $color-black;
+				color: $color-black;
+			}
+		}
+	}
+
+	/* WORDPRESS IMAGES */
+
+	img.alignright {float:right; margin:0 0 20px 20px}
+	img.alignleft {float:left; margin:0 20px 20px 0}
+	img.aligncenter {display: block; margin-left: auto; margin-right: auto}
+	a img.alignright {float:right; margin:0 0 20px 20px}
+	a img.alignleft {float:left; margin:0 20px 20px 0}
+	a img.aligncenter {display: block; margin-left: auto; margin-right: auto}
+	img.alignnone {margin: 5px 20px 20px 0;float: left;}
+}
+
+.social-share {
+	margin-bottom: 50px;
+
+	ul {
+		display: block;
+		margin: 0 auto;
+		padding: 0;
+		text-align:center;
+		width: 100%;
+
+		li {
+			list-style: none;
+			font-size: 1.5rem;
+			width: 50px;
+			display: inline;
+
+			a {
+				color: #ddd;
+				padding: 5px;
+			}
+		}
+	}
+
+}
+
+.post--navigation {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+
+	.nav--prev,
+	.nav--next {
+		width: 25%;
+		text-align:center;
+	}
+}

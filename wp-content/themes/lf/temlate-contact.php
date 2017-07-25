@@ -2,6 +2,7 @@
 /**
  * Template Name: Contact
  */
+global $background;
 ?>
 
 <?php while (have_posts()) : the_post(); ?>

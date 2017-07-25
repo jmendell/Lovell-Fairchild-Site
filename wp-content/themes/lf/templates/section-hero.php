@@ -1,6 +1,6 @@
 <?php  
 global $background; 
-print_r($background);
+var_dump($background);
 ?>
 
 <section class="hero">

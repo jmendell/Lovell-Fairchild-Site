@@ -45,10 +45,3 @@ function remove_width_attribute( $html ) {
    return $html;
 }
 
-
-
-// Remove Read More Links from all excerpts
-function custom_excerpt_more( $more ) {
-    return '';
-}
-add_filter( 'excerpt_more', 'custom_excerpt_more' );

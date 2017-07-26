@@ -16,6 +16,19 @@
 			}
 		}
 	}
+
+	.hero--slider {
+
+		figure{
+			display:none;
+
+			&.current {
+				display:block;
+			}
+		}
+
+		&:first-child {display:block;}
+	}
 }
 .hero-tall{
 	position:relative;

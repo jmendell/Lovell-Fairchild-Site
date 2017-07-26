@@ -12,7 +12,11 @@
 	    <?php get_template_part('templates/entry-meta'); ?>
 
 		<div class="entry-summary">
-		    <?php the_excerpt(); ?>
+		    <?php 
+	    	the_excerpt(); 
+	    	echo '<a class="read-more" href="'. get_permalink( get_the_ID() ) . '">' . __('Read More', 'sandoval-lang') . '</a>';
+		    ?>
+		    
 		</div>
 	</div>
 </article>

@@ -28,7 +28,7 @@ function site_background_image($background = null, $figure_class = 'background',
 		$mobile = $background_image[0]['mobile_image']['url'];
 	?>
 	<figure class="<?php echo $figure_class; ?>">
-		<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/loader.png" class="<?php echo $image_class; ?>"
+		<img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/images/loader.png" class="<?php echo $image_class; ?>"
 			alt="<?php echo $alt_text; ?>" data-src='{"m":"<?php echo $mobile; ?>","d":"<?php echo $desktop; ?>"}'
 		/>
 	</figure>

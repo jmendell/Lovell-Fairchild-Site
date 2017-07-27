@@ -14,7 +14,7 @@
 			<?php endif ?>
 		</a>
 		<div class="menu-options">
-			<a href="/contact" data-modal="contact" class="cta-button alt">Request an Interview</a>
+			<a href="<?php echo bloginfo('url'); ?>/contact" data-modal="contact" class="cta-button alt">Request an Interview</a>
 			<div class="menu-toggle">
 				<span class="center-line"></span>
 			</div>

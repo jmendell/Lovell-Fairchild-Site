@@ -105,6 +105,7 @@
 			opacity:.7;
 			@include size(100%);
 			@include position(absolute, 0 null null 0);
+			overflow: hidden;
 		}
 	}
 	.tree{

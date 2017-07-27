@@ -5,6 +5,6 @@ jQuery('.video-modal').videoModal();
 jQuery('.tree').scrollText();
 jQuery('input[type="checkbox"]').checkbox();
 
-jQuery(document).ready(function() {
-    nextSlide();
-});
+nextSlide();
+
+

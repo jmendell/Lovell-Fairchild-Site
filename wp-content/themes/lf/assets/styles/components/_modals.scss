@@ -1,4 +1,4 @@
-.video-modal{
+.video-modal {
 	display:none;
 	z-index:1000;
 	@include size(100%);
@@ -16,6 +16,71 @@
 			height:215px;
 		}
 	}
+}
+
+.gallery--modal {
+	display:none;
+	z-index:1000;
+	@include size(100%);
+	@include position(fixed, 50% null null 50%);
+	@include transform(translateY(-50%) translateX(-50%));
+
+	.escape {z-index: 1000;}
+
+	.modal-inner {
+		width: 80%;
+		margin: 0 auto;
+		position:relative;
+		top: 50%;
+		transform: translateY(-50%);
+
+		.gallery {
+			display: flex;
+			justify-items: center;
+			align-items: flex-start;
+			flex-direction: row;
+			flex-wrap: wrap;
+
+			.gallery-item {
+				width: 33%;
+				margin: 10px 0;
+				text-align:center;
+			}
+		}
+
+		img {
+			position: relative;
+			display: block;
+			margin: 0 auto;
+			max-height: 90vh;
+		}
+
+	}
+
+	.prev,
+	.next {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		font-size: 3rem;
+		font-weight: bold;
+		color: #fff;
+		background: transparent;
+		border: none;
+		cursor: pointer;
+
+		&:hover {
+			color: $color-brand;
+		}
+
+		&:focus,
+		&:active {
+			outline: none;
+		}
+	}
+	.prev {left: 20px;}
+	.next {right: 20px}
+
 }
 
 .team-modal{

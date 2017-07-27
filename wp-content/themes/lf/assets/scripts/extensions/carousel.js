@@ -78,3 +78,17 @@
 	  dots:true,
 	});
 })(jQuery);
+
+//Client Hero Slider
+function nextSlide() {
+	var slidespeed = 5500;
+	var slidetimer = null;
+    jQuery('figure.current').each(function() {
+        var next = jQuery(this).next('figure');
+        if (!next.size()) next = jQuery(this).siblings('figure').eq(0);
+        jQuery(this).fadeOut(1000).removeClass('current');
+        next.fadeIn(1000).addClass('current');
+        slidetimer = setTimeout('nextSlide()',slidespeed);
+    }); 
+    
+}

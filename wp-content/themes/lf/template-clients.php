@@ -5,7 +5,7 @@
 ?>
 
 <?php while (have_posts()) : the_post(); ?>
-	<?php get_template_part('templates/section', 'hero'); ?>
+	<?php get_template_part('templates/section', 'hero-slider'); ?>
 	<?php
 		$terms_array = new WP_Term_Query(array('taxonomy' => 'client_type'));
 		$terms = sort_categories_by_order($terms_array->terms);

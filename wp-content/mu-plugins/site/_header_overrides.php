@@ -1,7 +1,7 @@
 <?php
 
 function header_theme_overrides () {
-	$post_types = array( 'clients' => 'theme-dark' );
+	$post_types = array( 'clients' => 'theme-dark');
 
 	foreach ($post_types as $type => $value) {
 

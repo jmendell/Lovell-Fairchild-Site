@@ -16,6 +16,19 @@
 			}
 		}
 	}
+
+	.hero--slider {
+
+		figure{
+			display:none;
+
+			&.current {
+				display:block;
+			}
+		}
+
+		&:first-child {display:block;}
+	}
 }
 .hero-tall{
 	position:relative;
@@ -92,6 +105,7 @@
 			opacity:.7;
 			@include size(100%);
 			@include position(absolute, 0 null null 0);
+			overflow: hidden;
 		}
 	}
 	.tree{

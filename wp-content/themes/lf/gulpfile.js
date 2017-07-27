@@ -42,6 +42,7 @@ var config = manifest.config || {};
 //   ```
 // - `globs.fonts` - Array of font path globs.
 // - `globs.images` - Array of image path globs.
+// - `globs.video` - Array of video path globs.
 // - `globs.bower` - Array of all the main Bower files.
 var globs = manifest.globs;
 
@@ -211,6 +212,7 @@ gulp.task('fonts', function() {
     .pipe(gulp.dest(path.dist + 'fonts'))
     .pipe(browserSync.stream());
 });
+
 
 // ### Images
 // `gulp images` - Run lossless compression on all the images.

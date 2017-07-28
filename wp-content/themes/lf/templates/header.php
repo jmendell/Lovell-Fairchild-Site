@@ -1,6 +1,10 @@
 <?php
 	$header_position = get_field('header_position') ?: 'default';
-	$header_theme = get_field('header_theme') ?: 'default';
+	if(is_single()) {
+		$header_theme = get_field('header_theme') ?: 'light';
+	} else {
+		$header_theme = get_field('header_theme') ?: 'default';
+	}
 	$logo = get_field('site_logo', 'OPTIONS');
 	$logo_dark = get_field('site_logo_dark', 'OPTIONS');
 ?>

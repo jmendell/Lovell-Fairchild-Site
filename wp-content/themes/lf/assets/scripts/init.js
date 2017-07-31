@@ -7,4 +7,7 @@ jQuery('input[type="checkbox"]').checkbox();
 
 nextSlide();
 
+playVideo();
+
+
 

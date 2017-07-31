@@ -8,15 +8,18 @@
 	<?php $bg = get_field('background_image'); ?>
 	<section class="hero-tall">
 		<figure class="video-background">
-			<video width="100%" height="100%" controls loop="1" muted="1" autoplay="1">
+			
+			<video id="heroVideo" width="100%" height="100%" autoplay loop="1" muted="1">
 				<source src="<?php echo get_template_directory_uri(); ?>/dist/video/hero.mp4" type="video/mp4">
 			</video>
+			
 			<figure style="background-image:url(<?php echo $bg[0]['mobile_image']['url'] ?>);" class="mobile-bg"></figure>
-				<img class="bg" src="<?php echo get_template_directory_uri(); ?>/dist/images/bg.jpg">
+			
+			<img class="bg" src="<?php echo get_template_directory_uri(); ?>/dist/images/bg.jpg">
 
-				<?php get_template_part('templates/section', 'stars'); ?>
+			<?php get_template_part('templates/section', 'stars'); ?>
 
-			</figure>
+		</figure>
 		<figure class="tree" style="background-image:url(<?php echo get_template_directory_uri(); ?>/dist/images/tree.png);"></figure>
 		<div class="title-wrap">
 			<h1 class="title">Where Messages</h1>

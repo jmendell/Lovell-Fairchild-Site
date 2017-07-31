@@ -92,3 +92,14 @@ function nextSlide() {
     }); 
     
 }
+
+
+function playVideo() {
+	var is_safari = !!navigator.userAgent.match(/Version\/[\d\.]+.*Safari/);
+	
+	if(!is_safari) {
+		//document.getElementById('heroVideo').play();
+	}
+
+}
+

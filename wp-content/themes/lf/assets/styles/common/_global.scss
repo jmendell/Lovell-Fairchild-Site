@@ -1,6 +1,8 @@
 html{
 	padding:0;
 	margin:0;
+	height: 100%;
+	width: 100%;
 	@include media($mobile){
 		height:auto
 	}
@@ -9,6 +11,8 @@ body{
 	position:relative;
 	padding:0;
 	margin:0;
+	height: 100%;
+	width: 100%;
 	@include media($mobile){
 		height:auto
 	}

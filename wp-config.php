@@ -20,7 +20,7 @@ $environments = array(
   'localhost'   => 'lovell-fairchild.dev',
   'development' => 'lf-dev.sandovalcustom.website',
   'staging'     => 'lf.sandovalcustom.website',
-  'production'  => '143.95.32.199'
+  'production'  => 'lovell-fairchild.com'
 );
 
 

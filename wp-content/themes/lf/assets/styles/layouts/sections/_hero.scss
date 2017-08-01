@@ -30,6 +30,12 @@
 		&:first-child {display:block;}
 	}
 }
+
+.hero--news {
+	.background {
+		background-position: center top;
+	}
+}
 .hero-tall{
 	position:relative;
 	display:flex;

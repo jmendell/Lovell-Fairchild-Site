@@ -25,8 +25,17 @@ This README would normally document whatever steps are necessary to get your app
 
 ### Roles ###
 
+SUPERADMIN
+
+username: Admin
+
+password: Rockon08!
+
+------------------------------
+
 username: nancyLovell
 
 password: Ltz@HjYGIMmuVe#1dxrE#GIn
 
 role: Editor
+

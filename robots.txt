@@ -1,0 +1,36 @@
+User-Agent: *
+Disallow: /cgi-bin/
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /wp-content/
+Disallow: /feed/
+Disallow: */feed/
+Disallow: /comments/
+Disallow: /tag/ #comment out if you're using tags
+Disallow: /category/*/* #comment out if you're using categories
+Disallow: /trackback/
+Disallow: */trackback/
+Disallow: /author/
+Disallow: /*?
+Disallow: /*.php$
+Disallow: /*.inc$
+Disallow: /wp-login.php
+Disallow: /xmlrpc.php
+
+Disallow: /wp-content/plugins/
+Disallow: /wp-content/mu-plugins/
+Disallow: /archive/
+
+Allow: /wp-content/uploads/
+Allow: /wp-content/themes/juangabriel2017
+
+User-agent: Googlebot-Image
+Disallow:
+Allow: /
+
+User-agent: Mediapartners-Google
+Disallow:
+Allow: /
+
+#Sitemap: https://juangabrielofficial.net/sitemap.xml
+#Sitemap: https://juangabrielofficial.net/sitemap-misc.xml

@@ -33,7 +33,7 @@ $clients = get_terms( array(
  <section class="clients-preview">
     <div class="section-header">
         <div class="content-container">
-            <h2>Communication is a vast power, and PR is the key.</h2>
+            <h2>Communication is a vast gate. Public relations is a big key.</h2>
         </div>
     </div>
     <ul class="client-list">

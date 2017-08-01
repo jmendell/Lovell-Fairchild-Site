@@ -4,7 +4,7 @@ $id = get_the_ID();
 ?>
 
 <section class="hero hero--news">
-	<?php get_template_part('templates/section', 'stars'); ?>
+	<?php //get_template_part('templates/section', 'stars'); ?>
 	<?php //site_background_image($background); 
 	if( have_rows('background_image') ):
 		$background_image = get_field('background_image', $id);

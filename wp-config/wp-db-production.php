@@ -29,8 +29,8 @@ define('DB_HOST', 'localhost');
 define('DB_CHARSET', 'utf8');
 /** The Database Collate type. Don't change this if in doubt. */
 define('DB_COLLATE', '');
-define('WP_HOME','http://143.95.32.199/~lovellfairchild/');
-define('WP_SITEURL','http://143.95.32.199/~lovellfairchild/');
+define('WP_HOME','http://lovell-fairchild.com');
+define('WP_SITEURL','http://lovell-fairchild.com');
 define('FS_METHOD', 'direct');
 
 

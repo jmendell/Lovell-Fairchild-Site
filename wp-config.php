@@ -17,7 +17,7 @@
 // https://jonsuh.com/blog/configure-wordpress-for-multiple-environments/
 // Set your environment/url pairs
 $environments = array(
-  'localhost'   => 'lovell-fairchild.dev',
+  'localhost'   => 'lovell-fairchild.d.sandoval.com:8080',
   'development' => 'lf-dev.sandovalcustom.website',
   'staging'     => 'lf.sandovalcustom.website',
   'production'  => 'lovell-fairchild.com'

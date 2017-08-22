@@ -66,6 +66,6 @@ define('WP_DEBUG', false);
 define('WP_CACHE', false);     // disable the cache
 define('DISABLE_CACHE', true); // disable the cache
 define('WP_POST_REVISIONS', false);
-define( 'EMPTY_TRASH_DAYS', 0 );
+define( 'EMPTY_TRASH_DAYS', 15 );
 
 define('WP_MEMORY_LIMIT', '128M');

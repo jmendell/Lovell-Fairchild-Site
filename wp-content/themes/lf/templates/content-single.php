@@ -15,6 +15,20 @@
       }); 
   });
 </script>
+<style type="text/css">
+  .entry-content {
+    line-height: 1.6rem;
+  }
+  .entry-content li {
+    margin-bottom: 1.25rem;
+  }
+  .fb_iframe_widget {
+    margin-top: 70px;
+  }
+  ._5lm5 _2pi3 _3-8y {
+    display: none;
+  }
+</style>
 <?php 
   
   while (have_posts()) : the_post(); 
@@ -31,6 +45,7 @@
     </div>
     
     <?php //comments_template('/templates/comments.php'); ?>
+    <div class="fb-comments" data-href="<?=$url?>" data-numposts="5"></div>
   </article>
   <section class="social-share">
     <ul class="shareLinks">
